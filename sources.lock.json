@@ -1,0 +1,35 @@
+{
+  "baseline": "stable-11248",
+  "docker": {
+    "url": "https://github.com/jitsi/docker-jitsi-meet",
+    "tag": "stable-11248",
+    "commit": "276801c7fd4233f7288ba95bd132c219852c7ac7",
+    "included": [
+      "base",
+      "prosody",
+      "Makefile",
+      "LICENSE"
+    ]
+  },
+  "jitsiPlugins": {
+    "url": "https://github.com/jitsi/jitsi-meet",
+    "tag": "jitsi-meet_11248",
+    "commit": "f765042bf280cbd7dcd4a9bbdb63b09e9e4d3259",
+    "subdirectory": "resources/prosody-plugins",
+    "archiveSha256": "e28b2b084dda1801e7fd3eeb95707562d7b77f183a953de0609699ce79b07f5d",
+    "exactImagePluginMatch": "not yet verified byte-for-byte"
+  },
+  "prosody": {
+    "url": "https://prosody.im/downloads/source/prosody-13.0.6.tar.gz",
+    "version": "13.0.6",
+    "archiveSha256": "ec696f9cf562c3af4a04b07d3fb36a1cedcc4e69a392fddcfc524bc67d93050f",
+    "imagePackageVersion": "13.0.6-1~trixie1",
+    "debianPackagingPatches": "not included; upstream tarball is not identical to Debian packaged installation"
+  },
+  "officialImage": {
+    "reference": "ghcr.io/jitsi/prosody:stable-11248",
+    "indexDigest": "sha256:a7a58090d93412f7ecd6692330631519833b2e8c8b06ff433089fb54b7149bb2",
+    "amd64Digest": "sha256:5a478c431b7951f8c94c92dde7b7ac216a783d0bffa270cf84eadfa9fc110cb3"
+  },
+  "buildStatus": "upstream Dockerfile preserved; still installs packages remotely, does NOT consume sibling source directories; no image built"
+}
