@@ -1,3 +1,6 @@
+{{ if .Env.CLOUDMEET_HOST_CONTROL_CA -}}
+client_https_ssl = { cafile = "{{ .Env.CLOUDMEET_HOST_CONTROL_CA }}", verify = "peer" };
+{{ end -}}
 {{ $C2S_REQUIRE_ENCRYPTION := .Env.PROSODY_C2S_REQUIRE_ENCRYPTION | default "1" | toBool -}}
 {{ $DISABLE_C2S_LIMIT := .Env.PROSODY_DISABLE_C2S_LIMIT | default "0" | toBool -}}
 {{ $DISABLE_POLLS := .Env.DISABLE_POLLS | default "false" | toBool -}}
